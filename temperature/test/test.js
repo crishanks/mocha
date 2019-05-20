@@ -13,8 +13,15 @@ describe('Temperature Conversion', () => {
       assert.equal(undefined, convert.celsiusToFahrenheit(''));
     });
   });
-  // describe('fahrenheitToCelsius', () => {
-  //   it()
-  // })
-  
-})
+  describe('fahrenheitToCelsius', () => {
+    it('should convert -40 fahrenheit to -40 celsius', () => {
+      assert.equal(-40, convert.fahrenheitToCelsius(-40));
+    });
+    it('should convert 32 fahrenheit to 0 celsius', () => {
+      assert.equal(0, convert.fahrenheitToCelsius(32));
+    });
+    it('should return undifined if no temperature is input', () => {
+      assert.equal(undefined, convert.fahrenheitToCelsius('a'));
+    });
+  });
+});
